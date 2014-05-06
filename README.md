@@ -1,16 +1,27 @@
-CSE 30 tester .01
+CSE 30 tester .02
 =================
-######Version .01 of hw tester for CSE 30.
+######Version .02 of pa# tester for CSE 30.
 
-Download script to your ieng9 account and create a directory called scripts
-in your home directory.
-
-1. Add exacutable permission to the script.
+HOW TO INSTALL TESTER
+---------------------
+1. *(optional)* Make a directory named scripts to hold this script or any others
+you may have.
   ````bash
-  chmod +x tester
+  cd ~
+  mkdir scripts
   ````
 
-2. Add a path to this script to your profile.
+2. *(MUST DO)* Go into your script file then run the following command.
+  ````bash
+  cd scripts
+  curl -#L https://github.com/Kyly/testerasm/archive/master.tar.gz \
+  | tar zx && mv testerasm-master/tester . && chmod +x tester && \
+  rm -rf testerasm-master
+  ````
+3 *(optional)* If you would like to run the tester without having to type
+  the path (ex. ~/scripts/tester) you can add the the path to your .bash_profile
+  be doing the following.
+
   ````bash
   'export PATH=$PATH:/home/solaris/ieng9/cs12x/cs12xxx/scripts' >> ~/.bash_profile
   ````
@@ -19,13 +30,19 @@ in your home directory.
 
   *"cs12xxx" will need to be changed to your profile id.*
 
-3. Then go into your pa# directory folder and run the following command.
+HOW TO USE TESTER
+-----------------
+  Then go into your pa# directory folder and run the following command.
   ````bash
-  tester pa# pa#test arg1 arg2 arg3 arg4
+  tester pa# pa#test testfile
   ````
-  You will be asked if you would like to append to an existing test file or
-  overwrite the old one. The test file and your will both be run the both
-  will be opened in vimdiff for comparison.
+  "testfile" is a file you will need to make for each homework assignment.
+  A small sample file is included in the git repository.
+
+  The solution program (pa#test) and your program (pa# or whatever) will both 
+  be run then both will be opened in vimdiff for comparison. The file will 
+  show "TEST" followed by a number indicating which test you are looking at. 
+  The test number correspond to the line number of the test in you test file.
 
   *"mine" is the name of the document that contains your test cases*
   *"sol" is the name of the document that contains the solutions test cases*
