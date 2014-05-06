@@ -48,6 +48,9 @@ if !make;then
     exit 1
 fi
 
+# Remove old output files
+rm -f mine sol
+
 count=0	      # Count the number of tests performed
 passedCount=0 # Count the number of tests passed
 OLD_IFS=$IFS  # Save the delimiter
@@ -75,12 +78,12 @@ do
 
     # Create output file taking in stderr & stdout
     echo "      Attempting to run $my_prog$args ..."
-    $my_prog$args > mine 2>&1 \
+    $my_prog$args >> mine 2>&1 \
         && echo "      Running $my_prog$args...\n"
 
     # Save solution output
     echo "      Attempting to run $sample_prog $args..."
-    $sample_prog$args > sol 2>&1 \
+    $sample_prog$args >> sol 2>&1 \
         && echo "      Running $sample_prog$args...\n"
 
     if [ "`diff mine sol`" = "" ]; then

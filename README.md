@@ -1,16 +1,15 @@
-CSE 30 tester .02
+CSE 30 tester
 =================
 ######Version .02 of pa# tester for CSE 30.
 
 HOW TO INSTALL TESTER
 ---------------------
 1. *(optional)* Make a directory named scripts to hold this script or any others
-you may have.
+  you may have.
   ````bash
   cd ~
   mkdir scripts
   ````
-
 2. *(MUST DO)* Go into your script file then run the following command.
   ````bash
   cd scripts
@@ -23,16 +22,16 @@ you may have.
   be doing the following.
 
   ````bash
-  'export PATH=$PATH:/home/solaris/ieng9/cs12x/cs12xxx/scripts' >> ~/.bash_profile
+  'export PATH=$PATH:/home/solaris/ieng9/cs30x/cs30xxx/scripts' >> ~/.bash_profile
   ````
-  If for some reason this gives you an error just open the file in vim and
-  paste the export command somewhere in the middle.
+  If for some reason this gives you an error just open ~/.bash_profile in 
+  vim and paste the export command somewhere in the middle.
 
-  *"cs12xxx" will need to be changed to your profile id.*
+  *"cs12xxx" will need to be changed to your own profile id.*
 
 HOW TO USE TESTER
 -----------------
-  Then go into your pa# directory folder and run the following command.
+  Go into your pa# directory that you wish to test and run the following command.
   ````bash
   tester pa# pa#test testfile
   ````
@@ -46,3 +45,4 @@ HOW TO USE TESTER
 
   *"mine" is the name of the document that contains your test cases*
   *"sol" is the name of the document that contains the solutions test cases*
+
