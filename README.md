@@ -6,11 +6,13 @@ HOW TO INSTALL TESTER
 ---------------------
 1. *(optional)* Make a directory named scripts to hold this script or any others
   you may have.
+  
   ````bash
   cd ~
   mkdir scripts
   ````
 2. *(MUST DO)* Go into your script file then run the following command.
+  
   ````bash
   cd scripts
   curl -#L https://github.com/Kyly/testerasm/archive/master.tar.gz \
