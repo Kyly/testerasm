@@ -38,7 +38,9 @@ shift
 
 # Make your file
 # This makes the default target
-if [ $? -ne 0 ];then
+make
+
+if [ "$?" -ne 0 ];then
     echo "      **********************************************"
     echo "      *        Make failed!! Exiting script.       *"
     echo "      **********************************************"
