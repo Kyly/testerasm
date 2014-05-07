@@ -17,7 +17,7 @@ HOW TO INSTALL TESTER
   | tar zx && mv testerasm-master/tester . && chmod +x tester && \
   rm -rf testerasm-master
   ````
-3 *(optional)* If you would like to run the tester without having to type
+3. *(optional)* If you would like to run the tester without having to type
   the path (ex. ~/scripts/tester) you can add the the path to your .bash_profile
   be doing the following.
 
