@@ -41,11 +41,14 @@ shift
 make
 
 if [ "$?" -ne 0 ];then
+    echo 
+    echo
     echo "      **********************************************"
     echo "      *        Make failed!! Exiting script.       *"
     echo "      **********************************************"
-    echo "                    ~Sorry Dude :( ~"
-
+    echo "                    ~ Sorry Dude :( ~"
+    echo
+    echo
     #Quit script
     exit 1
 fi
