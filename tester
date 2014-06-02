@@ -72,8 +72,8 @@ do
     echo $count_msg
 
     # number test in file to make the results easer to understend
-    echo $count_msg >> mine
-    echo $count_msg >> sol
+    echo "$count_msg: $args" >> mine
+    echo "$count_msg: $args" >> sol
 
     # Read arguments
     args=""
@@ -83,13 +83,20 @@ do
 
     # Create output file taking in stderr & stdout
     echo "      Attempting to run $my_prog$args ..."
-    $my_prog$args >> mine 2>&1 \
-        && echo "      Running $my_prog$args...\n"
+    $my_prog$args >> mine 2>&1
+    
+    # Capture exit code and write it below current test
+    echo "EXIT CODE: $?\n" >> mine
+    echo "      Running $my_prog$args...\n"
+
 
     # Save solution output
     echo "      Attempting to run $sample_prog $args..."
-    $sample_prog$args >> sol 2>&1 \
-        && echo "      Running $sample_prog$args...\n"
+    $sample_prog$args >> sol 2>&1
+    
+    # Capture exit code and write it below current test
+    echo "EXIT CODE: $?\n" >> sol
+    echo "      Running $sample_prog$args...\n"
 
     if [ "`diff mine sol`" = "" ]; then
         let passedCount++
