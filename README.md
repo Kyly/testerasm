@@ -24,7 +24,7 @@ HOW TO INSTALL TESTER
   be doing the following.
 
   ````bash
-  'export PATH=$PATH:/home/solaris/ieng9/cs30x/cs30xxx/scripts' >> ~/.bash_profile
+  echo 'export PATH=$PATH:/home/solaris/ieng9/cs30x/cs30xxx/scripts' >> ~/.bash_profile
   ````
   If for some reason this gives you an error just open ~/.bash_profile in 
   vim and paste the export command somewhere in the middle.
